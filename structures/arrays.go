@@ -86,7 +86,19 @@ func (A *Array) Get() {
 }
 
 func (A *Array) Delete() {
+	var value int
+	fmt.Println("Set the position to be get")
+	_, err := fmt.Scanln(&value)
+	if err != nil {
+		return
+	}
 
+	if value < 0 || value >= len(A.elements) {
+		fmt.Println("Out of index")
+		return
+	}
+
+	A.elements = append(A.elements[:value], A.elements[value+1:]...)
 }
 
 func (A *Array) Size() {
@@ -94,7 +106,7 @@ func (A *Array) Size() {
 }
 
 func (A *Array) Print() {
-	for _, value := range A.elements {
-		fmt.Printf("[%d] ", *value)
+	for key, value := range A.elements {
+		fmt.Printf("[%d: %d] ", key, *value)
 	}
 }
