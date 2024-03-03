@@ -2,7 +2,6 @@ package structures
 
 import (
 	"fmt"
-	"os"
 )
 
 type ArrayMethods interface {
@@ -51,7 +50,7 @@ func ArrayFunc() {
 			array.Size()
 		case 6:
 			fmt.Println("Good bye")
-			os.Exit(0)
+			return
 		default:
 			fmt.Println("Try again!")
 		}

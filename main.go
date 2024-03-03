@@ -15,6 +15,7 @@ func main() {
 		fmt.Println("| Select and a option: |")
 		fmt.Println("| 1: Array             |")
 		fmt.Println("| 2: Stack             |")
+		fmt.Println("| 3: Queue             |")
 		fmt.Println("| 6: Exit              |")
 		fmt.Println("------------------------")
 		fmt.Scanln(&option)
@@ -23,6 +24,8 @@ func main() {
 			structures.ArrayFunc()
 		case 2:
 			structures.StackFunc()
+		case 3:
+			structures.QueueFunc()
 		case 6:
 			fmt.Println("Good bye")
 			os.Exit(0)

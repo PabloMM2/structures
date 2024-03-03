@@ -2,7 +2,6 @@ package structures
 
 import (
 	"fmt"
-	"os"
 )
 
 type StackMethods interface {
@@ -58,7 +57,7 @@ func StackFunc() {
 			stack.Top()
 		case 6:
 			fmt.Println("Good bye")
-			os.Exit(0)
+			return
 		default:
 			fmt.Println("Try again!")
 		}
