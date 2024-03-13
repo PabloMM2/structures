@@ -17,6 +17,7 @@ func main() {
 		fmt.Println("| 2: Stack             |")
 		fmt.Println("| 3: Queue             |")
 		fmt.Println("| 4: Tree              |")
+		fmt.Println("| 5: Linked list       |")
 		fmt.Println("| 6: Exit              |")
 		fmt.Println("------------------------")
 		fmt.Scanln(&option)
@@ -29,6 +30,8 @@ func main() {
 			structures.QueueFunc()
 		case 4:
 			structures.TreeFunc()
+		case 5:
+			structures.LinkedListFunc()
 		case 6:
 			fmt.Println("Good bye")
 			os.Exit(0)

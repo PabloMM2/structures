@@ -14,7 +14,6 @@ type StackMethods interface {
 
 type Stack struct {
 	head *Node
-	top  *int
 }
 
 type Node struct {
@@ -78,7 +77,6 @@ func (S *Stack) Push() {
 	}
 
 	S.head = node
-	return
 }
 
 func (S *Stack) Pop() {
